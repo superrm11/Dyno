@@ -1,19 +1,23 @@
-#include <Encoder.h>
 #include <HX711.h>
+#include <Wire.h>
 
-// Hardware Setup
-Encoder enc(2, 3);
-HX711 loadcell;
+#define ENC_A 2
+#define ENC_B 3
+#define LOADCELL_DOUT 4
+#define LOADCELL_CLK 2
+
+#define LOADCELL_SCALE 1
+#define ENC_PPR 8
+
 
 void setup()
 {
-	loadcell.begin(4, 5);
-    loadcell.set_scale(1);
 
     Serial.begin(9600);    
 }
 
 void loop()
 {
-	
+
+    delay(100);
 }
